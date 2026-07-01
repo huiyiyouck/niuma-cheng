@@ -18,7 +18,7 @@
 - **默认只读**：可以读取、检索、对比各子项目的文件来回答问题。
 - **绝不修改子项目**：不编辑、不回写任何子项目的代码、文档、配置或工作流文件；不进入任何子项目的团队工作流角色；不在子项目里创建 / 更新 `docs/progress/`。
 - **例外（本文件维护）**：照「索引维护职责」订正本文件（根索引）属于本文件的维护职责范围，**不算「改子项目」**。
-- 每个子项目有**自己的 git 仓库和自己的 Claude Code / 团队工作流**，具体开发在各项目目录内进行，不在这里。
+- 每个子项目有**自己的 git 仓库和自己的 Codex / 团队工作流**，具体开发在各项目目录内进行，不在这里。
 - 默认且必须使用中文交流。
 - 除「索引维护职责」规定的照真源订正外，对本文件其他内容（角色、边界、生态关系等）的修改，仍只有 Owner 在根目录明确要求时才做。
 
@@ -92,7 +92,7 @@ Owner 在生态根提出立项（"立项 X" / "新建项目 X"）
 | 目录 | 定位 | 分类（内部） | 技术栈 | 状态 |
 |------|------|------|--------|------|
 | `niuma-cheng-xiaobao` | 牛马程小报 — AI 多源新闻聚合平台：信息源管理、抓取调度、L0 分类、新闻展示、评分加权（`score_total`） | 业务·主产品 | Node.js + Fastify + Vue3 + PostgreSQL | 运行中，v0.6 迭代，已部署 `news.huiyiyou.cloud` |
-| `niuma-cheng-ai` | niuma-cheng 生态内部通用 AI 处理中枢（Agent Hub）— 生态内多项目未来均可调用同一 AI 处理服务，多调用方预留（非对外泛化平台，见 decisions/0002）；首落地 xiaobao news-l1：四维评分（`score`+`reason`）、标签、摘要、翻译、按需工具调用（KB 检索 / 链接读取 / Web 搜索） | 业务·服务方 | Python + FastAPI + LangGraph | ⚠️ 骨架 / 占位，各节点逻辑未实现；已配 git remote，已接入团队工作流 |
+| `niuma-cheng-ai` | AI 处理中枢 / Agent Hub — 为小报做 L1 新闻 LLM 处理：四维评分（`score`+`reason`）、标签、摘要、翻译、按需工具调用（KB 检索 / 链接读取 / Web 搜索） | 业务·服务方 | Python + FastAPI + LangGraph | ⚠️ 骨架 / 占位，各节点逻辑未实现；已配 git remote，已接入团队工作流 |
 | `niuma-cheng-coordination` | 跨项目协调仓库 — 契约 / 需求池 / 状态 / 决策的单一真源，只处理跨项目边界 | 协调 | 纯 Markdown | 维护中 |
 | `niuma-cheng-workboard` | 跨项目 Agent 工作看板 — 只读总览各项目工作流文档、角色状态、跨项目需求与阻塞（"管理中枢"为 v0.2 未来方向） | 工具 | React 18 + Vite + Tailwind v4 + shadcn（前端，对齐小报）+ 本地 Node 聚合后端 | v0.1 已上线 `workboard.huiyiyou.cloud` |
 | `agent-workflow` | 一人公司 AI 开发团队工作流的**真源仓库**（single source of truth），被各项目复制使用并统一维护 | 框架真源 | Markdown 制品 | 自我演进中 |
@@ -122,4 +122,4 @@ xiaobao (调用方) ──HTTP POST /v1/runs/news-l1──▶ ai (服务方)
 
 ## 已知不一致（仅记录，不在此修复）
 
-- 暂无（原 `../claude-workflow` 路径、`niuma-cheng-ai` 无 git remote 两条均已修复并清理，2026-06-25）。
+- 暂无（原 `../Codex-workflow` 路径、`niuma-cheng-ai` 无 git remote 两条均已修复并清理，2026-06-25）。

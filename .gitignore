@@ -4,7 +4,8 @@
 /niuma-cheng-xiaobao/
 /niuma-cheng-ai/
 /niuma-cheng-workboard/
-# 机器本地 / Agent 配置（含权限、密钥风险）
+# 机器本地 / IDE / Agent 配置（含权限、密钥风险）
 /.claude/
 /.agents/
 /.codex/
+/.idea/
